@@ -1,0 +1,51 @@
+body {
+  background: url(../images/bg_a_1920x1200.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.EOL_container {
+  background: rgba(255,255,255,0.6);
+  padding: 25px 25px 25px 25px;
+  border-radius: 5px;
+  margin-top:30px;
+  margin-bottom: 30px;
+  min-width: 200px;
+  max-width: 600px;
+  float: none !important;
+  text-align: center;
+  overflow:hidden;
+}
+.EOL_announce {
+    margin-top: 0px;
+}
+.button_board .btn{
+    height: 46px;
+    padding-top: 13px;
+}
+.button_board {
+    margin-top:10px;
+    border-top: gray solid 1px;
+    padding-top: 10px;
+}
+.EOLmenu {
+    float: left;
+    margin-top: -10px;
+}
+
+.construction {
+  margin: auto;
+  background: rgba(255, 255, 0, 0.2);
+  color: white;
+  font: 2em 'Arial', 'Helvetica', sans-serif;
+  font-weight: 600;
+  padding: 25px 25px 25px 25px;
+  border-radius: 5px;
+  min-width: 300px;
+  max-width: 600px;
+  float: none !important;
+  text-align: center;
+  overflow:hidden;
+}

@@ -1,0 +1,50 @@
+doctype html
+html(ng-app="EOLApp")
+  head
+    title= title
+    link(rel="shortcut icon" href="/images/logo_200x200.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='../node_modules/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='../node_modules/angular/angular.min.js')
+    script(src='../node_modules/angularcountdown/dist/angularcountdown.js')
+    script.
+      var app = angular.module('EOLApp', ['angular-countdown']);
+
+      app.controller('CountController', ['$scope', function($scope) {
+        var launch = '2016-09-18 23:59:59 GMT';
+
+        function getTimeRemaining(endtime) {
+          var t = Date.parse(endtime) - Date.parse(new Date());
+          var seconds = Math.floor((t/1000) % 60);
+          var minutes = Math.floor((t/1000/60) % 60);
+          var hours = Math.floor((t/(1000*60*60)) % 24);
+          var days = Math.floor(t/(1000*60*60*24));
+          return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          };
+        }
+
+        function initialiseClock(id, endtime) {
+          var clock = document.getElementById(id);
+          var timeinterval = setInterval(function() {
+            var t = getTimeRemaining(endtime);
+            clock.innerHTML = t.days + ' days ' +
+                              t.hours + ' hours ' +
+                              t.minutes + ' min ' +
+                              t.seconds + ' sec';
+            if(t.total <= 0) {
+              clearInterval(timeinterval);
+            }
+          }, 1000);
+        }
+
+        initialiseClock('clockdiv', launch);
+      }]);
+  body
+    block content

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div(class="EOL_container center-block col-xs-12 col-sm-6 col-md-5")
+      div(class="EOLmenu btn-group")
+        button(type="button" class="btn btn-default dropdown-toggle glyphicon glyphicon-menu-hamburger disabled" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        ul(class="dropdown-menu")
+            li 
+              a(href="http://intelmap.net/") Intel Map
+            li
+              a(href="http://reimbursement.eolalliance.com/") Reimbursements
+            li
+              a(href="https://skills.eolalliance.com/") Skill Checker
+            li
+              a(href="http://timers.eolalliance.com/") Timers
+
+      img(src="/images/logo_200x200.png" alt="End of Life Alliance" width="200")
+      h1(class="EOL_announce") End of Life Alliance
+      a(href="https://wiki.eolalliance.com/" class="btn btn-primary btn-lg btn-block disabled" role="button") Join the Insurgency
+      
+      div(class="button_board")
+        a(href="https://auth.eolalliance.com/" class="btn btn-default col-xs-6 disabled" role="button") Auth
+        a(href="https://forum.eolalliance.com/" class="btn btn-default col-xs-6 disabled" role="button") Forums
+        a(href="https://zkillboard.com/alliance/498125261/" class="btn btn-default col-xs-6 disabled" role="button") Killboard
+        a(href="https://wiki.eolalliance.com/" class="btn btn-default col-xs-6 disabled" role="button") Guides
+    div(class="construction" ng-controller="CountController")
+      div(id="clockdiv")
