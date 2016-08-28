@@ -1,0 +1,28 @@
+body {
+  background: url(../images/bg_e_1920x1200.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.EOL_error_container {
+  background: rgba(255,255,255,0.6);
+  padding: 25px 25px 25px 25px;
+  border-radius: 5px;
+  margin-top:30px;
+  margin-bottom: 30px;
+  min-width: 300px;
+  max-width: 600px;
+  float: none !important;
+  text-align: center;
+  overflow:hidden;
+}
+
+.EOL_announce {
+    margin-top: 0px;
+}
+
+.ital {
+    font-style: italic;
+}
