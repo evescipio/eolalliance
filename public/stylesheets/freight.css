@@ -1,0 +1,21 @@
+body {
+    background: rgb(75, 75, 75) url(../images/bg_freight_500x552.png) no-repeat left bottom fixed; 
+}
+
+h2, h4 {
+    color: white;
+}
+
+.eol_form {
+  background: rgba(255,255,255,0.6);
+  padding: 25px 25px 25px 25px;
+  border-radius: 5px;
+  margin-top:30px;
+  margin-bottom: 30px;
+  float: none !important;
+  overflow:hidden;
+}
+
+.reward {
+    color: steelblue;
+}

@@ -1,0 +1,17 @@
+doctype html
+html(ng-app="EOLApp")
+  head
+    title= title
+    link(rel="shortcut icon" href="/images/logo_200x200.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href='../node_modules/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+    script(src='../node_modules/angular/angular.min.js')
+    script(src='../node_modules/angularcountdown/dist/angularcountdown.js')
+    script(src='/javascripts/controllers/eolapp.controller.js') 
+    
+  body
+    block content
