@@ -18,7 +18,9 @@ block content
                         div(class="col-md-5")
                           img(src="images/screen1.png" class="img-eol img-responsive")
                         div(class="col-md-7")
-                          p For the first few days, the new website will default to the login screen, unless you are already logged in.
+                          p For the first few days, the new website will default to the login screen, so that everyone can create a new account and login.
+                          p Once you are logged in, the site will default to the main content on all future visits.
+                          p When most of us are signed up, the site homepage will return to provide a general landing page for visitors.
                   div(class="row")
                     div(class="panel panel-default")
                       div(class="panel-heading") Making a new account
@@ -27,7 +29,7 @@ block content
                           img(src="images/screen2.png" class="img-eol img-responsive")
                         div(class="col-md-7")
                           p As this is a completely new site, we all need to make a new account and then login.
-                          p To create and account, click the 'Create an Account' link. 
+                          p To create and account, click the 'Create an account' link under the login box.
 
                   div(class="row")
                     div(class="panel panel-default")
@@ -37,7 +39,11 @@ block content
                           img(src="images/screen3.png" class="img-eol img-responsive")
                         div(class="col-md-7")
                           p Enter relevant details to create an account.
-                          p Note: A real email address is required in order to activate.        
+                          p Note: 
+                          ol
+                            li A real email address is required in order to activate your account.  
+                            li Use a throwaway email account (ie. no need to use your RL named email).
+                            li If you would like an [CharacterName]@eolalliance.com email address, contact Scipio via evemail.      
 
                   div(class="row")
                     div(class="panel panel-default")
@@ -46,8 +52,9 @@ block content
                         div(class="col-md-5")
                           img(src="images/screen4.png" class="img-eol img-responsive")
                         div(class="col-md-7")
-                          p After successfully creating an account, you'll automatically return to the login screen to be able to login.
+                          p After successfully creating an account, you'll automatically return to the login screen to login.
                           p If you select the 'Remember me' check box, you won't have to login next time you come to the site.
+                          p The site uses local web storage in the browser with all details encrypted. The information you keep in that storage will be recognised each time you return.
 
                   div(class="row")
                     div(class="panel panel-default")
@@ -57,9 +64,10 @@ block content
                           img(src="images/screen5.png" class="img-eol img-responsive")
                         div(class="col-md-7")
                           p Until an API Key is added, the site won't show much information at first.
-                          p All account holders are automatically added to the 'Public' group by default. This allows anyone who joins, the ability to view public information from the alliance.
-                          p This will include modules such as the public forum posts and events calendar.
-                          p However there are no write capability for anyone with only public privileges and as we have no forum posts yet, there is nothing to show.     
+                          p All account holders are automatically added to the 'Public' collection by default. This provides anyone who joins, the ability to view public information from the alliance.
+                          p This includes read access to the public forum posts, public services, announcements and events calendar.
+                          p However there are no write capabilities for anyone with only public access.
+                          p In order to create spaces and create/join collections, a character API Key is required. To add an API Key, select the cog icon on the top-right of the header bar.   
 
 
                   div(class="row")
@@ -69,7 +77,17 @@ block content
                         div(class="col-md-5")
                           img(src="images/screen6.png" class="img-eol img-responsive")
                         div(class="col-md-7")
-                          p When you add an API Key for a character, the site will assign read/write privileges based on api informaton:
+                          p When you add an API Key for a character, the site will assign read/write privileges based on api informaton
+                          h3 The more API access you provide, the more services the site can provide
+                          p A full character api will deliver the most services through the site
+                          h4 Minimim Requirement:
+                          p The minimum api access needed is 'Character Sheet':
+                          img(src="images/charactersheet.png" class="img-responsive")
+                          br
+                          p The most important aspect is ensuring no expiry:
+                          img(src="images/noexpiry.png" class="img-responsive")
+                          br
+                          p Access is then automatically provided by the site based on what information is can read from your API:
                           h3 EOL Member: 
                           ul
                             li Full read/write access
@@ -94,6 +112,21 @@ block content
                           img(src="images/screen7.png" class="img-eol img-responsive")
                         div(class="col-md-7")
                           p Once an API Key is added, you'll have access to several areas and services, with everything just a click away from the Dashboard.
+                          h4 Advantages of a Full Character API:
+                          ul
+                            li All forum (Collections) and blog (Spaces) access
+                            li Events calendar access
+                            li Access to services - Freight, Planetary Interaction service, EOL Intel, Timers
+                            li Full character profile
+                            li Skill Queue view
+                            li Skills analysis and planner
+                            li Alliance doctine analysis (ability to compare your skills against requirements to fly the alliance doctrine fits)
+                            li Check your assets
+                            li Track the progress of contracts
+                            li Use of the market trading tools
+                            li Track industry jobs
+                            li View your wallet transactions from out of game
+                          img(src="images/fullapi.png" class="img-responsive")
 
                     div(class="panel panel-default")
                       div(class="panel-heading") Mobile first
