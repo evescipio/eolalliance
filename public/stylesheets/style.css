@@ -7,7 +7,7 @@ body {
 }
 
 .EOL_container {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,1);
   padding: 25px 25px 25px 25px;
   border-radius: 5px;
   margin-top:30px;
@@ -48,4 +48,7 @@ body {
   float: none !important;
   text-align: center;
   overflow:hidden;
+}
+.img-eol {
+    margin: 0 auto;
 }

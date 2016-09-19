@@ -1,9 +1,10 @@
 body {
-    background: rgb(75, 75, 75) url(../images/bg_freight_500x552.png) no-repeat left bottom fixed; 
+    background: #eee; 
 }
 
 h2, h4 {
-    color: white;
+    color: black;
+    text-align: center;
 }
 
 .eol_form {

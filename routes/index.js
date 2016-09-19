@@ -10,4 +10,8 @@ router.get('/freight', function(req, res, next) {
   res.render('freight', {title: 'EOL Freight Service' });
 });
 
+router.get('/holding', function(req, res, next) {
+  res.render('holding', {title: 'End of Life Alliance'});
+})
+
 module.exports = router;
