@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>End of Life Alliance</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+        <!-- custom styles -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <script>
+
+            var quote1 = '';
+            var quote2 = '';
+
+            var quotes = [
+                "Welcome to Eve Online. Here's a rubik's cube, go fuck yourself.",
+                "Eve is an mmo and playing an mmo by yourself is like masturbating in the middle of an orgy.",
+                "Other MMOs are what Eve players play when training racial BS to lv5.",
+                "Yes I know you're tackled, please die quietly.",
+                "Welcome to EVE Online. If you aren't already thinking of ways to injure or at least minorly inconvenience other players, you have a lot of catching up to do.",
+                "Armor HACs, armor HACs, ARMOR HACS!",
+                "Eve is a game for nerds who are to nerds what nerds are to normal people.",
+                "There was a flash of light and my ship turned into what looks like an egg, Did I level up?",
+                "EVE is a game about groups of bastards competing to be the biggest bastard in a battle for money and power.",
+                "Can I have your stuff?",
+                "JUMP! JUMP! JUMP!...SHIT!",
+                "Fleet warp, fleet warp. ... Uh, sorry guys. Get your pods out.",
+                "Right now, somewhere, someone is doing something stupid in a shiny ship... find them.",
+                "Didn't want that ship anyway."
+            ]
+
+            function randomQuote(max) {
+                return Math.floor(Math.random() * max);
+            }
+
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t/1000) % 60);
+                var minutes = Math.floor((t/1000/60) % 60);
+                var hours = Math.floor((t/(1000*60*60)) % 24);
+                var days = Math.floor(t/(1000*60*60*24));
+                return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+                };
+            }
+
+            function initialiseClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var timeinterval = setInterval(function() {
+                var t = getTimeRemaining(endtime);
+                clock.innerHTML = t.days + ' days ' +
+                                    t.hours + ' hours ' +
+                                    t.minutes + ' min ' +
+                                    t.seconds + ' sec';
+                if(t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+                }, 1000);
+            }
+
+            var time1 = '2016-10-21 11:30:00 GMT'
+            var time2 = '2016-10-22 11:30:00 GMT'
+            var time3 = '2016-10-23 11:30:00 GMT'
+
+            function initValues() {
+                document.querySelector('.quote1').innerHTML = quotes[randomQuote(quotes.length)];
+                document.querySelector('.quote2').innerHTML = quotes[randomQuote(quotes.length)];
+                initialiseClock('timer1', time1);
+                initialiseClock('timer2', time2);
+                initialiseClock('timer3', time3);
+            }
+        
+        </script>
+    </head>
+    <body onload="initValues()">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logo_navbar_inverse.png" alt="End Of Life Alliance Logo" height="20">&nbsp;End of Life Alliance</a>
+            <div class="collapse navbar-toggleable-xs" id="eolnavbar">
+                <ul class="nav navbar-nav pull-sm-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-one">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#news">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary disabled" href="#">Sign in</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="stage">
+            <div id="stage-caption">
+                <h1 class="display-3"><div class="quote1"></div></h1>
+                <p><div class="quote2"></div></p>
+                <a href="" class="btn btn-lg btn-success disabled">Sign up now</a>
+            </div>
+        </div>
+
+        <section id="about-one">
+            <div class="container">
+                <div class="row">
+                    <div class="about-content">
+                        <div class="col-lg-6 about-caption">
+                            <h6>About Us</h6>
+                            <h2>Small Gang PvP</h2>
+                            <p class="lead">Focussing on lowsec and nullsec pvp, we are a casual, no BS alliance that aims to generate as much content as possible for our members.</p>
+                            <p class="lead">Covering primarily the AU and EU timezones, we happily accept inquiries from anyone. No skillpoint minimum required.</p>
+                            <!--<a href="" role="button" class="btn btn-outline-secondary btn-lg">Enquire Now</a>-->
+                        </div>
+                        <div class="col-lg-6 text-sm-center hidden-sm-down">
+                            <img src="img/logo_200x200.png" alt="End of Life Alliance logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-two" class="about-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="about-content">
+                        <div class="col-lg-6 hidden-md-down">
+                            <img src="img/fortizar.jpg" alt="A Fortizar citadel">
+                        </div>
+                        <div class="col-lg-5 col-lg-offset-1">
+                            <h6>About Us</h6>
+                            <h2>Home for our members</h2>
+                            <p class="lead">Aside from pvp, we provide facilities and services for our members.</p>
+                            <p class="lead">These include</p>
+                            <ul>
+                                <li>Ship replacement program</li>
+                                <li>Freighter and jump freighter services</li>
+                                <li>Timer free jump clone facilities</li>
+                                <li>Industry support</li>
+                            </ul>
+                            <!--<a href="" role="button" class="btn btn-outline-secondary btn-lg pull-xs-right">Enquire Now</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-threeo">
+            <div class="container">
+                <div class="row">
+                    <div class="about-content">
+                        <div class="col-lg-5">
+                            <h6>About Us</h6>
+                            <h2>Tournament Play</h2>
+                            <p class="lead">2015 is our best result in the Alliance Tournament so far, finishing 11th overall following the exclusion of Warlords of the Deep and Camel Empire.</p>
+                            <p class="lead">We are aiming for top 12 in Alliance Tournament XV and actively looking for interested players and training partners.</p>
+                            <!--<a href="" role="button" class="btn btn-outline-secondary btn-lg">Enquire Now</a>-->
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-1">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/N19Lf_K8G-o" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <div class="container">
+                <h2>Latest News Feed</h2>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-columns">
+                            
+                            <div class="card">
+                                <img class="card-img-top" src="http://web.ccpgamescdn.com/newssystem/media/70609/1/NESBCPINK.jpg" alt="Rosada Dawn SKINs">
+                                <div class="card-block">
+                                    <h4 class="card-title">CCP: Rosada Dawn SKINs</h4>
+                                    <p class="card-text">We are delighted to announce that "Rosada Dawn" SKINs are now available for a limited time in the New Eden Store, in support of Breast Cancer Awareness Month this October!</p>
+                                    <p class="card-text">100% of the proceeds from the sale of these SKINs in the New Eden Store will be converted from Aurum to real world cash, and will be donated to Bleika Slaufan (The Pink Ribbon Campaign), which is owned and managed by the National Cancer Association here in Iceland.</p>
+                                    <small class="text-muted"><a href="https://community.eveonline.com/news/news-channels/eve-online-news/rosada-dawn-pink-skins-now-available-in-support-of-breast-cancer-awareness/">Link</a></small>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">Citadel Services</h4>
+                                    <p class="card-text">With the introduction of Engineering Complexes on 8 November 2016, citadels will be able to fit modules to support research, copying, invention and manufacture.</p>
+                                    <p class="card-text">End of Life's freeport citadels will be fitted with these modules, to support industrial play to generate ISK for members.</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">CCP: EULA Changes</h4>
+                                    <p class="card-text">As we move toward the introduction of alpha and omega clones, there are a number of changes we need to make to the EVE Online End User License Agreement in order to ensure that it stays up to date with the new access paradigm that will introduce free access to EVE Online.</p>
+                                    <p class="card-text"><small class="text-muted"><a href="https://community.eveonline.com/news/dev-blogs/end-user-license-agreement-changes-coming-with-eve-online-ascension/">Link</a></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card card-block card-inverse card-danger">
+                                <h4 class="card-title">Wardec</h4>
+                                <p class="card-text">We are currently wardecced.</p>
+                                <p class="card-text">Wardec instructions apply. Login to see alliance intelligence.</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">Top PVP Killers - Oct 2016</h4>
+                                    <p class="card-text">The top pvpers in Alliance for October were:</p>
+                                    <table class="table">
+                                        <tr>
+                                            <th>1</th>
+                                            <td><img src="https://imageserver.eveonline.com/Character/94849234_32.jpg" alt="Moerhard Rots"></td>
+                                            <td>Moerhard Rots</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <td><img src="https://imageserver.eveonline.com/Character/91758909_32.jpg" alt="Tintinmik Fett"></td>
+                                            <td>Tintinmik Fett</td>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <td><img src="https://imageserver.eveonline.com/Character/95909227_32.jpg" alt="Qerxue Ormand"></td>
+                                            <td>Qerxue Ormand</td>
+                                        </tr>
+                                    </table>
+                                    <p class="card-text">Congrats. Prizes will be contracted shortly.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="events-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="events-content">
+                        <h2>Upcoming Events</h2>
+                        <div class="card-deck-wrapper">
+                            <div class="card-deck">
+                                <div class="card">
+                                    <div class="card-header card-primary text-xs-center eol-inverse">
+                                        PVP Roam
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Friday, 21 October 2016</h4>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <td>11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Server</th>
+                                                    <td>Tranquility</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Staging</th>
+                                                    <td>Stacmon</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>FC</th>
+                                                    <td>General Vachot</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Doctrine</th>
+                                                    <td>Remote Rep T3D</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div id="timer1"></div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header card-info text-xs-center eol-inverse">
+                                        AT XV Training
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Saturday, 22 October 2016</h4>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <td>11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Server</th>
+                                                    <td>Singularity</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Staging</th>
+                                                    <td>S-U8A4</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>FC</th>
+                                                    <td>Scipio Artelius</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Doctrine</th>
+                                                    <td>TBA</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div id="timer2"></div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header card-primary text-xs-center eol-inverse">
+                                        PVP Roam
+                                    </div>
+                                    <div class="card-block">
+                                        <h4 class="card-title">Sunday, 23 October 2016</h4>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <td>11:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Server</th>
+                                                    <td>Tranquility</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Staging</th>
+                                                    <td>Stacmon</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>FC</th>
+                                                    <td>General Vachot</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Doctrine</th>
+                                                    <td>Build a Vexor</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div id="timer3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JQuery first, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+    </body>
+</html>
